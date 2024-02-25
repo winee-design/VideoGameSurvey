@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Survey</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Video Game Survey</h1>
+      <p id="description">Let us know your gaming habits<p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <fieldset>
+          <legend>Personal Info</legend>
+          <label id="name-label" class="personal-info-label" for="name">
+            <strong>Name: </strong>
+            <input id="name" type="text" name="name" placeholder="Samus Aran" required/>
+          </label>
+          <label id="email-label" class="personal-info-label" for="email">
+            <strong>Email: </strong>
+            <input id="email" type="email" name="email" placeholder="saran@metroid.com" required/>
+          </label>
+          <label id="number-label" class="personal-info-label" for="age">
+            <strong>Age: </strong><small>(optional)</small>
+            <input id="number" type="number" name="age" min="13" max="130" placeholder="27"/>
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Gaming Info</legend>
+          <p>Your go-to device for gaming...</p>
+          <select id="dropdown" name="device" required>
+            <option value="" disabled selected hidden>choose a device</option>
+            <option value="console">Console</option>
+            <option value="handheld">Handheld</option>
+            <option value="pc">PC</option>
+            <option value="tablet">Tablet</option>
+            <option value="mobile">Mobile</option>
+          </select>
+          <p>How many hours a week do you spend playing games?</p>
+          <label for="hours-1">
+            <input id="hours-1" type="radio" name="gaming-hours" value="none" checked/>
+            None
+          </label>
+          <label for="hours-2">
+            <input id="hours-2" type="radio" name="gaming-hours" value="1-10"/>
+            1-10
+          </label>
+          <label for="hours-3">
+            <input id="hours-3" type="radio" name="gaming-hours" value="11-20"/>
+            11-20
+          </label>
+          <label for="hours-4">
+            <input id="hours-4" type="radio" name="gaming-hours" value="21-30"/>
+            21-30
+          </label>
+          <label for="hours-5">
+            <input id="hours-5" type="radio" name="gaming-hours" value="31-40"/>
+            31-40
+          </label>
+          <label for="hours-6">
+            <input id="hours-6" type="radio" name="gaming-hours" value="40+"/>
+            40+
+          </label>
+          <p>What are your favorite genres? <small>(check all that apply)</small></p>
+          <label for="genre-action">
+            <input id="genre-action" type="checkbox" name="favorite-genre" value="action"/> Action
+          </label>
+          <label for="genre-adventure">
+            <input id="genre-adventure" type="checkbox" name="favorite-genre" value="adventure"/> Adventure
+          </label>
+          <label for="genre-rpg">
+            <input id="genre-rpg" type="checkbox" name="favorite-genre" value="rpg"/> RPG <small>(Role Playing Game)</small>
+          </label>
+          <label for="genre-fps">
+            <input id="genre-fps" type="checkbox" name="favorite-genre" value="fps"/> FPS <small>(First Person Shooter)</small>
+          </label>
+          <label for="genre-mmo">
+            <input id="genre-mmo" type="checkbox" name="favorite-genre" value="mmo"/> MMO <small>(Massively Multiplayer Online)</small>
+          </label>
+          <label for="genre-strategy">
+            <input id="genre-strategy" type="checkbox" name="favorite-genre" value="strategy"/> Strategy
+          </label>
+          <label for="genre-simulation">
+            <input id="genre-simulation" type="checkbox" name="favorite-genre" value="simulation"/> Simulation
+          </label>
+          <label for="genre-sports">
+            <input id="genre-sports" type="checkbox" name="favorite-genre" value="sports"/> Sports
+          </label>
+          <label for="genre-platformer">
+            <input id="genre-platformer" type="checkbox" name="favorite-genre" value="platformer"/> Platformer
+          </label>
+          <label for="genre-survival">
+            <input id="genre-survival" type="checkbox" name="favorite-genre" value="survival"/> Survival
+          </label>
+          <p>Describe your ideal game, what console you would prefer it is on, and what genre it would be... <small>(optional)</small></p>
+          <textarea name="ideal-game" rows=8 placeholder="Enter ideal game..."></textarea>
+        </fieldset>
+        <fieldset>
+          <button id="submit" type="submit"><strong>Submit</strong></button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
